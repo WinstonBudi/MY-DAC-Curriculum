@@ -18,7 +18,7 @@ FROM purchasing.vendor
 
 -- Select only name, start time and end time.
 
-SELECT 
+SELECT
 	name,
 	starttime,
 	endtime
@@ -153,7 +153,11 @@ WHERE jobtitle = 'Design Engineer'
 
 -- From product, select either Black or Silver
 
-
+SELECT *
+FROM production.product
+WHERE color = 'Black'
+	OR color = 'Silver';
+	
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- WHERE clause: AND clause
@@ -163,10 +167,14 @@ WHERE jobtitle = 'Design Engineer'
 SELECT *
 FROM purchasing.vendor
 WHERE preferredvendorstatus = TRUE
-	AND activeflag = TRUE
+	AND activeflag = TRUE;
 
 -- From employee, gender must be Male and maritalstatus must be single
 
+SELECT *
+FROM humanresources.employee
+WHERE gender = 'M'
+	AND maritalstatus = 'S';
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
